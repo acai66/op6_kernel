@@ -1218,8 +1218,8 @@ EXPORT_SYMBOL(nonseekable_open);
 int stream_open(struct inode *inode, struct file *filp)
 {
 	filp->f_mode &= ~(FMODE_LSEEK | FMODE_PREAD | FMODE_PWRITE | FMODE_ATOMIC_POS);
+	filp->f_mode |= FMODE_STREAM;
 	return 0;
 }
 
 EXPORT_SYMBOL(stream_open);
-
