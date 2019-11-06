@@ -1108,7 +1108,7 @@ out:
 }
 
 static size_t compat_readv(struct file *file,
-			   const struct compat_iovec __user *vec,
+			   const structcompat_iovec __user *vec,
 			   unsigned long vlen, loff_t *pos, int flags)
 {
 	ssize_t ret = -EBADF;
@@ -1809,3 +1809,4 @@ out:
 	return ret;
 }
 EXPORT_SYMBOL(vfs_dedupe_file_range);
+
