@@ -1661,11 +1661,6 @@ static ssize_t qpnp_haptics_store_activate(struct device *dev,
 	if (chip->vmax_mv <= HAP_VMAX_MIN_MV && (val != 0))
 		return count;
 
-	if ((ignore_next_request) && (val != 0)) {
-		ignore_next_request = 0;
-		return count;
-	}
-
 	if (val) {
 		hrtimer_cancel(&chip->stop_timer);
 		if (is_sw_lra_auto_resonance_control(chip))
@@ -1904,11 +1899,12 @@ static ssize_t qpnp_haptics_store_vmax(struct device *dev,
 	rc = kstrtoint(buf, 10, &data);
 	if (rc < 0)
 		return rc;
-	if (chip->test_mode)
-		data = 2900;
 
 	if (chip->vmax_override)
 		return count;
+
+	if (chip->test_mode)
+		data = 2900;
 
 	old_vmax_mv = chip->vmax_mv;
 	chip->vmax_mv = data;
@@ -2811,6 +2807,7 @@ static int qpnp_haptics_probe(struct platform_device *pdev)
 			goto sysfs_fail;
 		}
 	}
+		pr_info("qpnp_haptics_probe done\n");
 
 	gchip = chip;
 
