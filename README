@@ -1,3 +1,10 @@
+### Add patches and configs for NetHunter -- OnePlus 6 and OnePlus 6T
+- kernel source from [Boos4721](https://github.com/Boos4721/op6_kernel)
+- rtl8812au patches from [johanlike](https://github.com/johanlike/DJY_88XXAU_For_4.4__4.9_4.14_4.19_Android_Kernel_Patch)
+- rtl8818eus patches from [aircrack-ng](https://github.com/aircrack-ng/rtl8188eus)
+- toolchain: Clang11 build from [ClangBuiltLinux](https://github.com/ClangBuiltLinux/tc-build)
+
+
         Linux kernel release 4.x <http://kernel.org/>
 
 These are the release notes for Linux version 4.  Read them carefully,

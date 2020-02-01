@@ -8,6 +8,10 @@
 obj-y				+= irqchip/
 obj-y				+= bus/
 
+obj-$(CONFIG_RTL8821AU)	  += rtl8812au/
+obj-$(CONFIG_RTL8188EU)   += rtl8188eus/
+
+
 obj-$(CONFIG_GENERIC_PHY)	+= phy/
 
 obj-$(CONFIG_VSERVICES_SUPPORT)	+= vservices/
