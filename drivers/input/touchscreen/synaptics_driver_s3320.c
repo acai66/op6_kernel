@@ -1,18 +1,3 @@
-/************************************************************************************
- ** File: - /android/kernel/drivers/input/touchscreen/synaptic_s3320.c
- ** Copyright (C), 2008-2012, OEM Mobile Comm Corp., Ltd
- **
- ** Description:
- **      touch panel driver for synaptics
- **      can change MAX_POINT_NUM value to support multipoint
- ** Version: 1.0
- ** Date created: 10:49:46,18/01/2012
- ** Author: Yixue.Ge@BasicDrv.TP
- **
- ** --------------------------- Revision History: --------------------------------
- ** 	<author>	<data>			<desc>
- **  morgan.gu@BSP.TP modified for oem 2017-10-30 s3706 tp_driver
- ************************************************************************************/
 #include <linux/of_gpio.h>
 #include <linux/irq.h>
 #include <linux/i2c.h>
