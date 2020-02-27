@@ -1,3 +1,5 @@
+## Archived, New repo can be found here: [source code](https://github.com/acai66/op6-op6t-nethunter-kernel)
+
 ### Add patches and configs for NetHunter -- OnePlus 6 and OnePlus 6T
 - kernel source from [Boos4721](https://github.com/Boos4721/op6_kernel)
 - rtl8812au patches from [johanlike](https://github.com/johanlike/DJY_88XXAU_For_4.4__4.9_4.14_4.19_Android_Kernel_Patch)
